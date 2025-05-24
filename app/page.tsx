@@ -391,6 +391,7 @@ export default function Home() {
                   </li>
                 </ul>
               </CardContent>
+              
               <CardFooter className="flex justify-between">
                 <Button variant="outline" size="sm" asChild>
                 <Link href="https://platform.sparo.app/" target="_blank" rel="noreferrer">
