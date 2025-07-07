@@ -1,8 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState } from "react";
-import ShinyText from "./TextAnimations/ShinyText/ShinyText";
 import ScrollIndicator from "./ScrollIndicator";
 import Threads from "./Backgrounds/Threads/Threads";
 import DecryptedText from "./TextAnimations/DecryptedText/DecryptedText";

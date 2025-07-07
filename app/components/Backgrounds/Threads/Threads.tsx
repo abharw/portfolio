@@ -1,7 +1,3 @@
-/*
-	Installed from https://reactbits.dev/ts/tailwind/
-*/
-
 import React, { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Color } from "ogl";
 
@@ -137,7 +133,7 @@ const Threads: React.FC<ThreadsProps> = ({
   ...rest
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const animationFrameId = useRef<number>();
+  const animationFrameId = useRef<number>(0);
 
   useEffect(() => {
     if (!containerRef.current) return;

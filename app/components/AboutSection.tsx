@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import PixelCard from './Components/PixelCard/PixelCard';
 
 export default function AboutSection() {
 	return (
@@ -14,15 +13,12 @@ export default function AboutSection() {
                     I began my journey in technology when I was in middle school, where I participated in VEX robotics. During quarantine, I read Neural Networks and Deep Learning by Michael Nielsen; I fell down the machine learning rabbit hole and started building projects with Python and JavaScript. I quickly realized my passion for coding and problem-solving, leading me to pursue a degree in Statistics and Machine Learning at Carnegie Mellon University.
                     <br />
                     <br />
-                    Throughout my academic career, I've worked on various projects ranging from web applications to machine learning models. I'm constantly learning and exploring new technologies to expand my skill set.
+                    Throughout my academic career, I&apos;ve worked on various projects ranging from web applications to machine learning models. I&apos;m constantly learning and exploring new technologies to expand my skill set.
                     <br />
                     <br />
-                    When I'm not building, you can find me going on nature walks, reading murder mysteries, playing video games, or exploring new food places. I'm also passionate about music and I enjoy traveling.
+                    When I&apos;m not building, you can find me going on nature walks, reading murder mysteries, playing video games, or exploring new food places. I&apos;m also passionate about music and I enjoy traveling.
                 </motion.p>
             </div>
-            {/* <PixelCard>
-                <Image src="/images/about-me.jpg" alt="About Me" width={1000} height={1000} />
-            </PixelCard> */}
         </section>
     );
 }
