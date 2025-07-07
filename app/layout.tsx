@@ -14,8 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Arav Bhardwaj",
-  description:
-    "Welcome to my portfolio! I am a passionate full-stack developer who bridges the gap between frontend and backend development. Specializing in creating complete web solutions, from beautiful user interfaces to robust server architectures.",
+  description: "Arav Bhardwaj - Developer Portfolio",
   keywords: [
     "Full-Stack Developer",
     "Software Engineer",
