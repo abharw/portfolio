@@ -53,7 +53,7 @@ export default function ContactSection() {
               wrapperClassName="mt-0.5"
             >
               <a
-                href="https://drive.google.com/file/d/1px2tbTu7xTKehEGTb-4S6CB3kzg2NSwr/view?usp=drive_link"
+                href="https://drive.google.com/file/d/11W_r-pjk_oZJyo_2yZPq9HfwTqIfAxkt/view?usp=sharing"
                 target="_blank"
                 className="px-8 py-3 bg-black border border-gray-800 rounded-lg font-medium hover:bg-gray-900 transition-colors inline-flex items-center justify-center gap-2"
               >
