@@ -1,5 +1,5 @@
-import { ExternalLink, Github } from "lucide-react"
-import { FadeIn } from "./fade-in"
+import { ExternalLink, Github } from "lucide-react";
+import { FadeIn } from "./fade-in";
 
 const projects = [
   {
@@ -15,17 +15,30 @@ const projects = [
     title: "Ecosort",
     description:
       "Autonomous waste sorting system achieving 82% classification accuracy using YOLOv5 model trained on 25K+ TrashNet images. Features multi-threaded architecture optimized for 30 FPS on Raspberry Pi 5 with precision servo-controlled mechanical separation.",
-    technologies: ["Python", "YOLOv5", "OpenCV", "Raspberry Pi", "Computer Vision"],
+    technologies: [
+      "Python",
+      "YOLOv5",
+      "OpenCV",
+      "Raspberry Pi",
+      "Computer Vision",
+    ],
     github: "https://github.com/abharw/ecosort",
     demo: "#",
     featured: false,
   },
   {
-    title: "PyTorch Transfer Learning",
+    title: "Verity",
     description:
-      "Implementation of transfer learning techniques using PyTorch for efficient model training on custom datasets. Explores fine-tuning pre-trained models for various computer vision tasks.",
-    technologies: ["PyTorch", "Python", "Transfer Learning", "Deep Learning"],
-    github: "https://github.com/abharw/pytorch-transfer-learning",
+      "Blockchain-based platform for AI trust and verification. Full-stack application implementing smart contracts and decentralized verification mechanisms to ensure AI model integrity and transparency.",
+    technologies: [
+      "Python",
+      "TypeScript",
+      "Solidity",
+      "Blockchain",
+      "Smart Contracts",
+      "Docker",
+    ],
+    github: "https://github.com/abharw/verity",
     demo: "#",
     featured: false,
   },
@@ -38,16 +51,18 @@ const projects = [
     demo: "#",
     featured: false,
   },
-]
+];
 
 export function Projects() {
-  const featuredProject = projects.find((p) => p.featured)
-  const otherProjects = projects.filter((p) => !p.featured)
+  const featuredProject = projects.find((p) => p.featured);
+  const otherProjects = projects.filter((p) => !p.featured);
 
   return (
     <section id="projects" className="mb-24 scroll-mt-20 md:mb-32">
       <FadeIn>
-        <h2 className="mb-8 text-sm uppercase tracking-wider text-muted-foreground">Projects</h2>
+        <h2 className="mb-8 text-sm uppercase tracking-wider text-muted-foreground">
+          Projects
+        </h2>
       </FadeIn>
 
       {featuredProject && (
@@ -56,11 +71,18 @@ export function Projects() {
             <div className="mb-2 inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
               Featured
             </div>
-            <h3 className="mb-3 text-2xl font-medium">{featuredProject.title}</h3>
-            <p className="mb-6 text-lg leading-relaxed text-muted-foreground">{featuredProject.description}</p>
+            <h3 className="mb-3 text-2xl font-medium">
+              {featuredProject.title}
+            </h3>
+            <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
+              {featuredProject.description}
+            </p>
             <div className="mb-6 flex flex-wrap gap-2">
               {featuredProject.technologies.map((tech) => (
-                <span key={tech} className="rounded-md border border-border px-3 py-1 text-sm text-foreground">
+                <span
+                  key={tech}
+                  className="rounded-md border border-border px-3 py-1 text-sm text-foreground"
+                >
                   {tech}
                 </span>
               ))}
@@ -70,10 +92,10 @@ export function Projects() {
                 href={featuredProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+                className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Github className="h-4 w-4" strokeWidth={1.5} />
-                View Code
+                Code
               </a>
             </div>
           </div>
@@ -85,10 +107,15 @@ export function Projects() {
           <FadeIn key={index} delay={0.2 + index * 0.1}>
             <div className="group relative rounded-lg border border-border bg-card p-6 transition-all hover:border-accent/50 hover:shadow-lg">
               <h3 className="mb-2 text-xl font-medium">{project.title}</h3>
-              <p className="mb-4 leading-relaxed text-muted-foreground">{project.description}</p>
+              <p className="mb-4 leading-relaxed text-muted-foreground">
+                {project.description}
+              </p>
               <div className="mb-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <span key={tech} className="rounded-md border border-border px-3 py-1 text-xs text-foreground">
+                  <span
+                    key={tech}
+                    className="rounded-md border border-border px-3 py-1 text-xs text-foreground"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -109,5 +136,5 @@ export function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }
