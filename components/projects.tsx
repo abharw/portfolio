@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Ecosort",
     description:
-      "Autonomous waste sorting system achieving 82% classification accuracy using YOLOv5 model trained on 25K+ TrashNet images. Features multi-threaded architecture optimized for 30 FPS on Raspberry Pi 5 with precision servo-controlled mechanical separation.",
+      "Autonomous waste sorting system achieving 82% classification accuracy using YOLOv5 model trained on 25K+ TrashNet images. Uses multi-threaded architecture optimized for 30 FPS on Raspberry Pi 5 with precision servo-controlled mechanical separation.",
     technologies: [
       "Python",
       "YOLOv5",
@@ -34,20 +34,10 @@ const projects = [
       "Python",
       "TypeScript",
       "Solidity",
-      "Blockchain",
       "Smart Contracts",
       "Docker",
     ],
     github: "https://github.com/abharw/verity",
-    demo: "#",
-    featured: false,
-  },
-  {
-    title: "H2O GBM",
-    description:
-      "Gradient Boosting Machine implementation using H2O.ai framework for scalable machine learning tasks. Demonstrates automated machine learning capabilities and model optimization techniques.",
-    technologies: ["H2O.ai", "Python", "Machine Learning", "GBM"],
-    github: "https://github.com/abharw/h2o-gbm",
     demo: "#",
     featured: false,
   },
