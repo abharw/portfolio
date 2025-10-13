@@ -41,6 +41,27 @@ const projects = [
     demo: "#",
     featured: false,
   },
+  {
+    title: "Liemap",
+    description:
+      "NetLogo simulation model that visualizes the spread of lies in different cultural contexts. Analyzes deception patterns based on lie severity, personal benefit, and social proximity parameters.",
+    technologies: [
+      "NetLogo",
+      "Agent-Based Modeling",
+    ],
+    github: "https://github.com/abharw/liemap",
+    demo: "#",
+    featured: false,
+  },
+  {
+    title: "PyScan Pro",
+    description:
+      "Learning and debugging tool for students featuring integrated code editor, file explorer, and step-by-step tracing capabilities. Provides comprehensive learning experience for Python programming education.",
+    technologies: ["Python", "OpenCV", "PIL", "Tesseract"],
+    github: "https://github.com/abharw/pytutor",
+    demo: "#",
+    featured: false,
+  },
 ];
 
 export function Projects() {
