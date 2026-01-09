@@ -1,20 +1,45 @@
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { FadeIn } from "./fade-in";
 
 const projects = [
   {
     title: "Sentinel",
-    description:
-      "FastAPI backend enforcing AI governance policies, cost controls, and compliance monitoring for LangChain applications with <10ms latency overhead. Features policy-as-code with YAML-based declarative rules and RBAC-based multi-tenant isolation.",
-    technologies: ["FastAPI", "Python", "LangChain", "MongoDB", "YAML", "RBAC"],
+    description: [
+      "Go-based AI governance gateway preventing cost overruns across LLM providers and MCP servers",
+      "Reduced policy deployment from hours to under 5 minutes via Python SDK",
+      "Policy engine with model-specific, provider-wide, and global enforcement",
+    ],
+    technologies: ["Go", "Python", "SQLite", "LangChain", "MCP"],
     github: "https://github.com/abharw/sentinel",
     demo: "#",
     featured: true,
   },
   {
+    title: "Verity",
+    description: [
+      "Content authenticity platform with AI detection, IPFS storage, and Polygon smart contracts",
+      "Full-stack app with FastAPI backend and Next.js frontend for verification",
+      "Immutable verification system for digital content tampering and deepfakes",
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "MongoDB",
+      "IPFS",
+      "Polygon",
+    ],
+    github: "https://github.com/abharw/verity",
+    demo: "#",
+    featured: false,
+  },
+  {
     title: "Ecosort",
-    description:
-      "Autonomous waste sorting system achieving 82% classification accuracy using YOLOv5 model trained on 25K+ TrashNet images. Uses multi-threaded architecture optimized for 30 FPS on Raspberry Pi 5 with precision servo-controlled mechanical separation.",
+    description: [
+      "Autonomous waste sorting with 82% accuracy using YOLOv5 on 25K+ images",
+      "Multi-threaded architecture optimized for 30 FPS on Raspberry Pi 5",
+      "Precision servo-controlled mechanical separation system",
+    ],
     technologies: [
       "Python",
       "YOLOv5",
@@ -27,24 +52,11 @@ const projects = [
     featured: false,
   },
   {
-    title: "Verity",
-    description:
-      "Blockchain-based platform for AI trust and verification. Full-stack application implementing smart contracts and decentralized verification mechanisms to ensure AI model integrity and transparency.",
-    technologies: [
-      "Python",
-      "TypeScript",
-      "Solidity",
-      "Smart Contracts",
-      "Docker",
-    ],
-    github: "https://github.com/abharw/verity",
-    demo: "#",
-    featured: false,
-  },
-  {
     title: "Liemap",
-    description:
-      "NetLogo simulation model that visualizes the spread of lies in different cultural contexts. Analyzes deception patterns based on lie severity, personal benefit, and social proximity parameters.",
+    description: [
+      "NetLogo simulation visualizing the spread of lies in different cultural contexts",
+      "Analyzes deception patterns based on severity, benefit, and social proximity",
+    ],
     technologies: [
       "NetLogo",
       "Agent-Based Modeling",
@@ -55,8 +67,10 @@ const projects = [
   },
   {
     title: "PyScan Pro",
-    description:
-      "Learning and debugging tool for students featuring integrated code editor, file explorer, and step-by-step tracing capabilities. Provides comprehensive learning experience for Python programming education.",
+    description: [
+      "Learning tool with integrated code editor and step-by-step tracing",
+      "Comprehensive Python programming education platform",
+    ],
     technologies: ["Python", "OpenCV", "PIL", "Tesseract"],
     github: "https://github.com/abharw/pytutor",
     demo: "#",
@@ -65,8 +79,8 @@ const projects = [
 ];
 
 export function Projects() {
-  const featuredProject = projects.find((p) => p.featured);
-  const otherProjects = projects.filter((p) => !p.featured);
+  // Sort projects so featured appears first
+  const sortedProjects = [...projects].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 
   return (
     <section id="projects" className="mb-24 scroll-mt-20 md:mb-32">
@@ -76,71 +90,46 @@ export function Projects() {
         </h2>
       </FadeIn>
 
-      {featuredProject && (
-        <FadeIn delay={0.1}>
-          <div className="group relative mb-8 overflow-hidden rounded-lg border border-border bg-card p-8 transition-all hover:border-accent/50 hover:shadow-xl">
-            <div className="mb-2 inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
-              Featured
-            </div>
-            <h3 className="mb-3 text-2xl font-medium">
-              {featuredProject.title}
-            </h3>
-            <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              {featuredProject.description}
-            </p>
-            <div className="mb-6 flex flex-wrap gap-2">
-              {featuredProject.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-md border border-border px-3 py-1 text-sm text-foreground"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="flex gap-4">
-              <a
-                href={featuredProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <Github className="h-4 w-4" strokeWidth={1.5} />
-                Code
-              </a>
-            </div>
-          </div>
-        </FadeIn>
-      )}
-
-      <div className="grid gap-6 md:grid-cols-2">
-        {otherProjects.map((project, index) => (
-          <FadeIn key={index} delay={0.2 + index * 0.1}>
-            <div className="group relative rounded-lg border border-border bg-card p-6 transition-all hover:border-accent/50 hover:shadow-lg">
-              <h3 className="mb-2 text-xl font-medium">{project.title}</h3>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
-                {project.description}
-              </p>
-              <div className="mb-4 flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-md border border-border px-3 py-1 text-xs text-foreground"
+      <div className="space-y-8">
+        {sortedProjects.map((project, index) => (
+          <FadeIn key={index} delay={0.1 + index * 0.1}>
+            <div className="group relative rounded-xl border border-border bg-card/50 backdrop-blur-sm p-6 md:p-8 transition-all hover:border-accent/50 hover:bg-card hover:shadow-lg">
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      {project.featured && (
+                        <div className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+                          Featured
+                        </div>
+                      )}
+                      <h3 className="text-xl md:text-2xl font-medium">{project.title}</h3>
+                    </div>
+                  </div>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent font-medium flex-shrink-0"
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  <Github className="h-4 w-4" strokeWidth={1.5} />
-                  Code
-                </a>
+                    <Github className="h-5 w-5" strokeWidth={1.5} />
+                    <span>View Code</span>
+                  </a>
+                </div>
+                <ul className="ml-6 space-y-2 text-base leading-relaxed text-muted-foreground list-disc list-outside">
+                  {project.description.map((point, idx) => (
+                    <li key={idx} className="pl-2">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="inline-flex items-center rounded-md border border-accent px-3 py-1 text-xs font-medium text-accent bg-transparent">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </FadeIn>

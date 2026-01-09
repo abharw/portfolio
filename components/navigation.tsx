@@ -8,7 +8,7 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects"]
+      const sections = ["about", "experience", "projects", "contact"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -42,7 +42,7 @@ export function Navigation() {
             AB
           </Link>
           <div className="flex gap-8">
-            {["about", "experience", "projects"].map((section) => (
+            {["about", "experience", "projects", "contact"].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
