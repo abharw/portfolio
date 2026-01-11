@@ -34,7 +34,7 @@ export function Hero() {
                 <span>646-829-7060</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/aravb"
+                href="https://www.linkedin.com/in/arav-bhardwaj1209"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 transition-colors hover:text-foreground"
