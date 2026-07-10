@@ -34,14 +34,6 @@ const experiences = [
   },
 ];
 
-const skills = [
-  { name: "LLM & AI Governance", meta: "95" },
-  { name: "Full-stack & Web3", meta: "90" },
-  { name: "Computer Vision", meta: "88" },
-  { name: "Agent-Based Modeling", meta: "85" },
-  { name: "Developer Tools", meta: "84" },
-];
-
 const projects = [
   {
     name: "Sentinel",
@@ -80,19 +72,19 @@ export function MinimalHome() {
     <div className="mh">
       <div className="mh__layout">
         <main className="mh__content">
-          <Sigil />
-
-          <h1 className="mh__name">Arav Bhardwaj</h1>
-
-          <p className="mh__bio">
-            CTO &amp; full-stack engineer, ex-CMU. Building intelligent systems at the intersection
-            of AI and software engineering.
-          </p>
+          <header className="mh__header">
+            <Sigil />
+            <h1 className="mh__name">Arav Bhardwaj</h1>
+            <p className="mh__bio">CTO &amp; full-stack engineer, ex-CMU.</p>
+          </header>
 
           <section className="mh__section" aria-labelledby="now-heading">
             <h2 id="now-heading" className="mh__label">
               Now
             </h2>
+            <p className="mh__paragraph">
+              Building intelligent systems at the intersection of AI and software engineering.
+            </p>
             <p className="mh__paragraph">
               Leading technical development at{" "}
               <a href="https://www.basicsu.com/" target="_blank" rel="noopener noreferrer">
@@ -108,25 +100,16 @@ export function MinimalHome() {
             </h2>
             <ul className="mh__projects" aria-label="Experience">
               {experiences.map((item) => (
-                <li key={item.name} className="mh__project">
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    {item.name}
+                <li key={item.name}>
+                  <a
+                    className="mh__project"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>{item.name}</span>
+                    <span className="mh__project-desc">{item.description}</span>
                   </a>
-                  <span className="mh__project-desc">{item.description}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="mh__section" aria-labelledby="skills-heading">
-            <h2 id="skills-heading" className="mh__label">
-              Skills
-            </h2>
-            <ul className="mh__list mh__list--cols">
-              {skills.map((item) => (
-                <li key={item.name} className="mh__row">
-                  <span className="mh__row-name">{item.name}</span>
-                  <span className="mh__row-meta">{item.meta}</span>
                 </li>
               ))}
             </ul>
@@ -138,11 +121,16 @@ export function MinimalHome() {
             </h2>
             <ul className="mh__projects" aria-label="Projects">
               {projects.map((project) => (
-                <li key={project.name} className="mh__project">
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    {project.name}
+                <li key={project.name}>
+                  <a
+                    className="mh__project"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>{project.name}</span>
+                    <span className="mh__project-desc">{project.description}</span>
                   </a>
-                  <span className="mh__project-desc">{project.description}</span>
                 </li>
               ))}
             </ul>

@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --portfolio-font-size: 1rem;
   /* Light mode - clean, minimal palette */
   --background: oklch(0.99 0 0); /* Off-white */
   --foreground: oklch(0.25 0 0); /* Dark charcoal */
