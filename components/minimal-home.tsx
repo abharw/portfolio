@@ -21,43 +21,10 @@ const experiences = [
     url: "https://www.karini.ai/",
   },
   {
-    name: "Sparo",
-    description:
-      "Built automated LinkedIn extraction at 120 profiles per hour. Developed matching algorithms that improved candidate placement by 30%.",
-    url: "https://sparo-frontend.vercel.app/",
-  },
-  {
     name: "Dartmouth-Hitchcock",
     description:
-      "Designed Wasserstein GANs for synthetic colorectal tissue imaging. Optimized HPC workflows on Slurm for terabyte-scale whole slide processing.",
+      "ML research in computational pathology. Designed and trained my own Wasserstein GAN architecture to generate synthetic colorectal tissue images, scaling training to terabyte-scale whole-slide data on Slurm HPC clusters.",
     url: "https://jlevy44.github.io/levylab/",
-  },
-];
-
-const projects = [
-  {
-    name: "Sentinel",
-    description:
-      "Go-based AI governance gateway preventing cost overruns across LLM providers and MCP servers. Reduced policy deployment from hours to under 5 minutes via Python SDK.",
-    url: "https://github.com/abharw/sentinel",
-  },
-  {
-    name: "Verity",
-    description:
-      "Content authenticity platform with AI detection, IPFS storage, and Polygon smart contracts. Full-stack app with FastAPI backend and Next.js frontend for verification.",
-    url: "https://github.com/abharw/verity",
-  },
-  {
-    name: "Ecosort",
-    description:
-      "Autonomous waste sorting with 82% accuracy using YOLOv5 on 25K+ images. Multi-threaded architecture optimized for 30 FPS on Raspberry Pi 5.",
-    url: "https://github.com/abharw/ecosort",
-  },
-  {
-    name: "Liemap",
-    description:
-      "NetLogo simulation visualizing the spread of lies in different cultural contexts. Analyzes deception patterns based on severity, benefit, and social proximity.",
-    url: "https://github.com/abharw/liemap",
   },
 ];
 
@@ -75,7 +42,9 @@ export function MinimalHome() {
           <header className="mh__header">
             <Sigil />
             <h1 className="mh__name">Arav Bhardwaj</h1>
-            <p className="mh__bio">CTO &amp; full-stack engineer, ex-CMU.</p>
+            <p className="mh__bio">
+              CTO, prev. ML research at Dartmouth, ex-CMU.
+            </p>
           </header>
 
           <section className="mh__section" aria-labelledby="now-heading">
@@ -83,14 +52,19 @@ export function MinimalHome() {
               Now
             </h2>
             <p className="mh__paragraph">
-              Building intelligent systems at the intersection of AI and software engineering.
+              Based out of SF
             </p>
             <p className="mh__paragraph">
               Leading technical development at{" "}
-              <a href="https://www.basicsu.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.basicsoftware.ai/" target="_blank" rel="noopener noreferrer">
                 Basics
               </a>
-              . Building AI-powered workforce training for trades workers.
+            </p>
+            <p className="mh__paragraph">
+              Exploring post-training for small models that learn how you work
+            </p>
+            <p className="mh__paragraph">
+              Learning cardistry
             </p>
           </section>
 
@@ -113,32 +87,6 @@ export function MinimalHome() {
                 </li>
               ))}
             </ul>
-          </section>
-
-          <section className="mh__section" aria-labelledby="projects-heading">
-            <h2 id="projects-heading" className="mh__label">
-              Projects
-            </h2>
-            <ul className="mh__projects" aria-label="Projects">
-              {projects.map((project) => (
-                <li key={project.name}>
-                  <a
-                    className="mh__project"
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>{project.name}</span>
-                    <span className="mh__project-desc">{project.description}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <p className="mh__more">
-              <a href="https://github.com/abharw" target="_blank" rel="noopener noreferrer">
-                More on GitHub →
-              </a>
-            </p>
           </section>
 
           <section className="mh__section" aria-labelledby="elsewhere-heading">
