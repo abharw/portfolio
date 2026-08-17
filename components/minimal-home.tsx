@@ -5,8 +5,8 @@ const experiences = [
   {
     name: "Basics",
     description:
-      "CTO at a TQ Ventures–backed startup. Building AI-powered workforce training for trades workers.",
-    url: "https://www.basicsu.com/",
+      "CTO at a TQ Ventures–backed startup. Building screen-aware macOS agents for human enablement",
+    url: "https://www.basicsoftware.ai/",
   },
   {
     name: "Carnegie Mellon",
