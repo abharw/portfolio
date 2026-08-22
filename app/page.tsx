@@ -30,7 +30,7 @@ const experiences = [
 
 const elsewhere = [
   { label: "GitHub", url: "https://github.com/abharw" },
-  { label: "LinkedIn", url: "https://www.linkedin.com/in/arav-bhardwaj1209" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/in/aravbhardwaj/" },
   { label: "Email", url: "mailto:aravb09@gmail.com" },
 ];
 
