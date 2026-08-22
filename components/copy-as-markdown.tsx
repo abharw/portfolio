@@ -11,6 +11,12 @@ const UNIFIED_FONT_SIZE_STYLES = `
   .sheet pre {
     font-size: var(--portfolio-font-size, 1rem);
   }
+
+  .split,
+  .menu,
+  .sheet {
+    box-shadow: none;
+  }
 `;
 
 export function CopyAsMarkdown() {
@@ -30,7 +36,7 @@ export function CopyAsMarkdown() {
   return (
     <CopyToLLM
       position="top-right"
-      theme="dark"
+      theme="light"
       content=".mh__content"
       items={["copy", "view", "chatgpt", "claude"]}
       label="Copy as Markdown"

@@ -39,7 +39,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${ibmPlexSans.variable} antialiased`}>
+      <body className={ibmPlexSans.variable}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

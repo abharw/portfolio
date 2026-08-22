@@ -1,9 +1,9 @@
 .mh {
-  --mh-bg: #0a0a09;
-  --mh-text: #ffffff;
-  --mh-muted: rgba(255, 255, 255, 0.5);
-  --mh-link-underline: rgba(255, 255, 255, 0.32);
-  --mh-hover: rgba(255, 255, 255, 0.055);
+  --mh-bg: #f7f6f3;
+  --mh-text: #0a0a09;
+  --mh-muted: rgba(10, 10, 9, 0.5);
+  --mh-link-underline: rgba(10, 10, 9, 0.32);
+  --mh-hover: rgba(10, 10, 9, 0.055);
 
   position: relative;
   background: var(--mh-bg);
@@ -46,6 +46,14 @@
   margin-bottom: 32px;
   line-height: 0;
   color: var(--mh-text);
+  width: 120px;
+  height: 120px;
+}
+
+.mh__sigil canvas {
+  display: block;
+  width: 120px;
+  height: 120px;
 }
 
 .mh__name {
