@@ -1,15 +1,20 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+import { Crimson_Pro, Lora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Suspense } from "react";
 import "./globals.css";
 import "./mh.css";
 
-const ibmPlexSans = IBM_Plex_Sans({
+const crimsonPro = Crimson_Pro({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-plex",
+  variable: "--font-crimson",
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
   display: "swap",
 });
 
@@ -39,7 +44,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={ibmPlexSans.variable}>
+      <body className={`${crimsonPro.variable} ${lora.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

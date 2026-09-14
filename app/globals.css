@@ -1,5 +1,5 @@
 :root {
-  --portfolio-font-size: 1rem;
+  --portfolio-font-size: 1.0625rem;
 }
 
 *,
@@ -15,6 +15,6 @@ body {
 }
 
 body {
-  background: #f7f6f3;
+  background: #ffffff;
   color: #0a0a09;
 }
