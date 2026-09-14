@@ -9,7 +9,7 @@ const PORTFOLIO_WIDGET_STYLES = `
   .root {
     top: 32px;
     right: 32px;
-    font-family: var(--font-crimson), "Iowan Old Style", Georgia, serif;
+    font-family: var(--font-serif), "Iowan Old Style", Georgia, serif;
     font-size: var(--portfolio-font-size, 1rem);
     font-weight: 300;
     line-height: 1.6;
