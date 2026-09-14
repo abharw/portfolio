@@ -175,10 +175,12 @@ const PORTFOLIO_WIDGET_STYLES = `
     color: #3f3f3e;
   }
 
+  /* On phones the link scrolls away with the header instead of floating over the copy. */
   @media (max-width: 640px) {
     .root {
-      top: 16px;
-      right: 16px;
+      position: absolute;
+      top: clamp(24px, 9vw, 40px);
+      right: clamp(24px, 9vw, 40px);
     }
   }
 `;

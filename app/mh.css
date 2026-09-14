@@ -180,13 +180,19 @@
 
 @media (max-width: 640px) {
   .mh {
-    --mh-gutter: 16px;
-    --mh-gap: 16px;
-    --mh-section-space: 48px;
+    --mh-gutter: clamp(24px, 9vw, 40px);
+    --mh-gap: 28px;
+    --mh-section-space: 56px;
+  }
+
+  /* Inset the rules on both sides, rather than bleeding right as on desktop. */
+  .mh__content {
+    padding-right: var(--mh-gutter);
   }
 
   .mh__row {
     grid-template-columns: minmax(0, 1fr);
+    padding-right: 0;
   }
 
   .mh__aside,
@@ -195,8 +201,17 @@
     grid-column: auto;
   }
 
-  .mh__sigil {
-    margin: -16px 0 8px;
+  .mh__sigil,
+  .mh__sigil canvas {
+    width: 64px;
+    height: 64px;
   }
 
+  .mh__sigil {
+    margin: -12px 0 0;
+  }
+
+  .mh__projects {
+    gap: 32px;
+  }
 }
